@@ -1,0 +1,64 @@
+:root {
+  --primary-color: rgba(1, 1, 1, 0.5);
+  --secondary-color: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75s;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.4;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+#showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+/* poner imagen de fondo con before */
+#showcase::before {
+  content: "";
+  background: url("https://source.unsplash.com/random/?hotdog") no-repeat center
+    center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+  border-radius: 4px;
+}
+.btn:hover {
+  opacity: 1;
+  background-color: var(--secondary-color);
+}
